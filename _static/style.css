@@ -1,0 +1,225 @@
+/* Ocean Theme CSS */
+
+/* Root color variables */
+:root {
+  --ocean-deep: #1e3a5f;
+  --ocean-medium: #2c5aa0;
+  --ocean-light: #4a90e2;
+  --ocean-cyan: #00a8cc;
+  --ocean-teal: #008b8b;
+  --foam-white: #f0f8ff;
+  --coral: #ff6b6b;
+  --seaweed: #2e7d32;
+}
+
+/* Main background - gradient like ocean depths */
+body {
+  background: linear-gradient(135deg, var(--foam-white) 0%, #e3f2fd 100%);
+  color: var(--ocean-deep);
+}
+
+/* Sidebar styling */
+.bd-sidebar {
+  background: linear-gradient(180deg, var(--ocean-deep) 0%, var(--ocean-medium) 100%);
+  color: white;
+  border-right: 3px solid var(--ocean-cyan);
+}
+
+.bd-sidebar .bd-toc-item .reference {
+  color: #b3d9ff;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.bd-sidebar .bd-toc-item .reference:hover {
+  color: white;
+  border-left: 3px solid var(--ocean-cyan);
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.bd-sidebar .bd-toc-item.current > .reference {
+  color: var(--ocean-cyan);
+  border-left: 3px solid var(--ocean-cyan);
+  background: rgba(0, 168, 204, 0.2);
+}
+
+/* Header styling */
+.bd-header {
+  background: var(--ocean-deep);
+  color: white;
+  box-shadow: 0 4px 6px rgba(30, 58, 95, 0.3);
+}
+
+.bd-header .navbar-brand {
+  color: var(--ocean-cyan) !important;
+  font-weight: bold;
+}
+
+/* Main content area */
+.bd-main {
+  background: white;
+  box-shadow: 0 0 20px rgba(30, 58, 95, 0.1);
+  border-radius: 10px;
+  margin: 20px;
+}
+
+/* Headings with ocean wave effect */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ocean-deep);
+  border-bottom: 2px solid transparent;
+  background: linear-gradient(90deg, var(--ocean-cyan), var(--ocean-light));
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.3s ease;
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+  background-size: 100% 2px;
+}
+
+h1 {
+  color: var(--ocean-deep);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  color: var(--ocean-medium);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--ocean-cyan);
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--ocean-cyan), var(--ocean-teal));
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* Code blocks */
+.highlight {
+  background: var(--foam-white);
+  border: 1px solid var(--ocean-light);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(30, 58, 95, 0.1);
+}
+
+code {
+  background: var(--foam-white);
+  color: var(--ocean-deep);
+  padding: 2px 4px;
+  border-radius: 4px;
+  border: 1px solid var(--ocean-light);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--ocean-medium), var(--ocean-cyan));
+  border: none;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 168, 204, 0.3);
+  background: linear-gradient(135deg, var(--ocean-cyan), var(--ocean-light));
+}
+
+/* Tables */
+table {
+  border: 1px solid var(--ocean-light);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th {
+  background: var(--ocean-medium);
+  color: white;
+}
+
+tr:nth-child(even) {
+  background: var(--foam-white);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--ocean-cyan);
+  background: var(--foam-white);
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 4px rgba(0, 168, 204, 0.1);
+}
+
+/* Navigation arrows */
+.prev-next-area {
+  border-top: 2px solid var(--ocean-light);
+  padding-top: 20px;
+}
+
+.prev-next-area a {
+  background: linear-gradient(135deg, var(--foam-white), #e3f2fd);
+  border: 1px solid var(--ocean-light);
+  border-radius: 8px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.prev-next-area a:hover {
+  background: linear-gradient(135deg, var(--ocean-cyan), var(--ocean-light));
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 168, 204, 0.3);
+}
+
+/* Footer */
+.bd-footer {
+  background: var(--ocean-deep);
+  color: var(--foam-white);
+  border-top: 3px solid var(--ocean-cyan);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--foam-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--ocean-light), var(--ocean-cyan));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--ocean-cyan), var(--ocean-teal));
+}
+
+/* Animations */
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.wave-animation {
+  animation: wave 2s ease-in-out infinite;
+}

@@ -1,0 +1,6 @@
+format: jb-book
+root: README
+chapters:
+- file: intro
+- file: markdown  
+- file: markdown-notebooks
